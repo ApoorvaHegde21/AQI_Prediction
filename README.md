@@ -42,3 +42,8 @@ The project aims at building a prediction model to predict the AQI of a region. 
 </p>
 
 The folder consists of two analysis files - one using a pre trained model and the other built from scratch.
+
+**Resource Analysis**
+- The factors that majorly decide the resources needed for the entire process are - size of the data and the complexity of the prcoess.
+- The process implemented in this project faces a bottleneck situation when it calculates the AQI for each data entry. As the size of the data grows the complexity of this stage over rules the overall complexity. This could lead to bringing in more computing resources in addition to the general computing resources.
+- On the other hand, there is an ambigious upper bound for the size of the data. Since the data collected is of daily basis, even a considerable larger duration as that of a decade, results in only 3650 entries. This size of data is easily manageable using General Computing Resources such as Intel x86 or x64. Therefore, the implemented data pipeline process works efficiently on a CPU without the need for bringing in a GPU.
